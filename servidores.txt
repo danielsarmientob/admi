@@ -119,15 +119,14 @@
   119  ssh-keygen
   120  cd ssh
   121  ls
-  122  cd ..
-  123  cd .ssh
-  124  cd ..
-  125  cd ..
-  126  cd .ssh
-  127  cd .ssh/
-  128  ls
-  129  cd ..
-  130  exit
-  131  exit
-  132  history
-
+  122  exit
+  123  exit
+  124  history
+  subnet 10.0.0.0 netmask 255.255.255.0{
+    range 10.0.0.100 10.0.0.150;
+    option broadcast-address 10.0.0.255;
+    default-lease-time 600;
+    max-lease-time 7200;
+  }
+  DHCPDARGS = enp0s9
+ 
