@@ -1,0 +1,133 @@
+ clear
+    2  ifconfig
+    3  ifconfig -a
+    4  sudo service network restart
+    5  ifconfig enp0s8 192.168.0.2 netmask 255.255.255.0 up
+    6  ifconfig enp0s9 10.0.0.2 netmask 255.255.255.0 up
+    7  ifconfig
+    8  sudo service network restart+
+    9  sudo service network restart
+   10  ifconfig
+   11  ifconfig
+   12  ping 192.168.0.3
+   13  ifconfig enp0s8 192.168.0.1 netmask 255.255.255.0 up 
+   14  ifconfig
+   15  ping 192.168.0.2
+   16  arp
+   17  vim /etc/sysconf/network
+   18  ifup enp0s8
+   19  hostname
+   20  cd /etc/
+   21  cd /sysconf
+   22  cd /sysconf/
+   23  ls
+   24  cd sysconfig
+   25  network-scripts/
+   26  cd network-scripts/
+   27  ifcfg -enp0s8
+   28  vim ifcfg -enp0s8
+   29  ifcfg-enp0s8
+   30  vim ifcfg-enp0s8
+   31  ifconfig
+   32  reboot
+   33  clear
+   34  ifconfig
+   35  ifconfig enp0s9 10.0.0.1 netmask 255.255.255.0 up
+   36  ifconfig
+   37  ping 10.0.0.2
+   38  sysctl net.ipv4.conf.all.forwarding=1
+   39  ping 10.0.0.2
+   40  cd /etc
+   41  sysconfig/
+   42  cd /sysconfig/
+   43  cd /sysconfig
+   44  cd sysconfig
+   45  cd network-scripts/
+   46  vim ifcgf-enp0s9
+   47  vim ifcfg-enp0s9
+   48  reboot
+   49  ping 10.0.0.2
+   50  dhclient -v enp0s8
+   51  ifconfig enp0s8 down
+   52  dchclient -v enp0s8
+   53  dhclient -v enp0s8
+   54  ifconfig enp0s8 up
+   55  ifconfig
+   56  vim /etc/dnsmasq.conf
+   57  sudo service dnsmasq restart
+   58  service dhcpd status
+   59  cd /etc/dhcp
+   60  service dhcp status
+   61  service dhcpd status
+   62  vim /etc/dnsmasq.conf 
+   63  vim /etc/dchp.conf
+   64  ls
+   65  cd ..
+   66  ls
+   67  vim /etc/dhcp.conf
+   68  vim /etc/dhcpd.conf
+   69  cat /etc/dhcp.conf
+   70  cd dhcp
+   71  ls
+   72  vim /etc/dchp.conf
+   73  ls
+   74  cd dhclient.d/
+   75  ls
+   76  cd ..
+   77  ls
+   78  vim /etc/dnsmasq.conf 
+   79  vim /etc/dnsmasq.conf 
+   80  vim /etc/dnsmasq.conf 
+   81  vim /etc/dnsmasq.conf 
+   82  cat /etc/dhcpd.conf
+   83  vim /etc/dhcpd.conf
+   84  ls
+   85  yum install dhcp
+   86  ls
+   87  cd ..
+   88  ls
+   89  cd dhcpd
+   90  cd dhcp
+   91  ls
+   92  vim chcpd.conf
+   93  vim dhcpd.conf
+   94  vim /etc/sysconfig/dhcpd 
+   95  vim dhcpd.conf
+   96  service dhcpd status
+   97  vim dhcpd.conf
+   98  service dhcpd status
+   99  vim /etc/sysconfig/dhcpd 
+  100  service dhcpd start
+  101  service dhcpd status
+  102  cd ..
+  103  vim /dchp/dhcpd.cof
+  104  vim /dhcp/dhcpd.cof
+  105  cd dhcp/
+  106  ls
+  107  vim dhcpd.conf
+  108  vim /etc/sysconfig/dhcpd 
+  109  lsof -i
+  110  netstat -tan
+  111   /etc/ssh/ssh_config 
+  112  cd ..
+  113  ssh root@server2
+  114  vim /etc/hots
+  115  vim /etc/hosts
+  116  ssh root@server2
+  117  scp /home/admin/Desktop/hola.txt root@server2:/tmp/copia_segura
+  118  ssh-keyggen
+  119  ssh-keygen
+  120  cd ssh
+  121  ls
+  122  cd ..
+  123  cd .ssh
+  124  cd ..
+  125  cd ..
+  126  cd .ssh
+  127  cd .ssh/
+  128  ls
+  129  cd ..
+  130  exit
+  131  exit
+  132  history
+
