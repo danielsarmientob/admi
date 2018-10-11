@@ -1,0 +1,194 @@
+ 1  pvcreate /dev/sdb1
+    2  pvcreate /dev/sdb2
+    3  pvcreate /dev/sdb3
+    4  pvdisplay
+    5  clear
+    6  vgcreate servidores /dev/sdb1 /dev/sdb2
+    7  vgdisplay
+    8  clear
+    9  lvdisplay
+   10  clear
+   11  vgdisplay
+   12  clear
+   13  vgscan
+   14  vgscan servidores
+   15  vgscan 
+   16  clear
+   17  lvcreate -L 150M -n volumen1 servidores
+   18  lvdisplay
+   19  clear
+   20  mkfs.ext4 /dev/servidores/volumen1 
+   21  mount /dev/servidores/volumen1 /mnt/
+   22  ls /mnt/
+   23  umount  /mnt/
+   24  ls /mnt/
+   25  clkid
+   26  clear
+   27  blkid
+   28  pvs
+   29  ls -l /dev/testing/storage
+   30  ls -l /dev/servidores/volumen1 
+   31  blkid
+   32  vim /etc/fstab 
+   33  ls /dev/mapper
+   34  vim /etc/fstab 
+   35  vim /etc/fstab 
+   36  ls /mnt
+   37  reboot
+   38  clear
+   39  blkid
+   40  ls /dev/mapper
+   41  ls -l /dev/servidores/volumen1 
+   42  clear
+   43  ls /dev/mapper
+   44  vim /etc/fstab 
+   45  vim /etc/fstab 
+   46  clear
+   47  sudo su 
+   48  admin
+   49  clear
+   50  man mount
+   51  clear
+   52  dd if=/dev/zero of=./mi_fs seek=1 bs=100M count=1
+   53  cd /dev
+   54  ls
+   55  clear
+   56  ls | grep ./mi_fs
+   57  ls
+   58  clear
+   59  dd if=/dev/zero of=./mi_fs seek=1 bs=100M count=1
+   60  dd if=/dev/zero of=./mi_fs seek=1 bs=100M count=1
+   61  ls
+   62  ls | gre mi_fs
+   63  ls | grep mi_fs
+   64  clear
+   65  ls | grep mi_fs
+   66  ls 
+   67  cd mi_fs
+   68  cat mi_fs
+   69  clear
+   70  ll -h
+   71  clear
+   72  ls
+   73  clear
+   74  ls | grep loop
+   75  losetup -a
+   76  clear
+   77  losetup /dev/loop0 mi_fs 
+   78  losetup -a
+   79  clear
+   80  mkfs.ext4 -j /dev/loop0
+   81  clear
+   82  mount
+   83  clear
+   84  mount -o loop /dev/loo0 /mnt/
+   85  clear
+   86  mount -o loop /dev/loop0 /mnt/
+   87  clear
+   88  ls /mnt
+   89  shutdown now
+   90  useradd user1
+   91  password user1
+   92  passwd user1
+   93  cat /etc/shadow
+   94  clear
+   95  groupadd  GID 6002 grupo1 
+   96  groupadd  -GID 6002 grupo1 
+   97  groupadd  -GID6002 grupo1 
+   98  clear
+   99  cat /etc/passwd
+  100  gorups
+  101  clear
+  102  groups
+  103  groups user1
+  104  su user1
+  105  vim /etc/shadow
+  106  vim /etc/passwd
+  107  su user1
+  108  vim /etc/passwd
+  109  su user1
+  110  clear
+  111  useradd user2
+  112  passwd user2
+  113  groups user1
+  114  groups user2
+  115  groupadd grupo1 -g 6008
+  116  usermod -G grupo1 user1
+  117  groups user1
+  118  usermod -g grupo1 user2
+  119  groups user2
+  120  userdel user2
+  121  userdel -r user2
+  122  vim /etc/security/access.conf 
+  123  sudo systemctl restart sshd
+  124  su user1
+  125  clear
+  126  vim /etc/security/access.conf 
+  127  su user1
+  128  vim /etc/security/access.conf 
+  129  su user1
+  130  vim /etc/security/access.conf 
+  131  user 1 
+  132  su user1
+  133  clear
+  134  vigr
+  135  useradd user3
+  136  passwd user3
+  137  cat /etc/passwd
+  138  clear
+  139  groupadd grupo3 -g 6009
+  140  groupadd grupo3 -g 6005
+  141  vigr
+  142  usermod -G grupo3 user3
+  143  groups user3
+  144  shutdown now
+  145  history
+  146  history
+  147  lsblk
+  148  fdisk /etc/sdc
+  149  fdisk /dev/sdc
+  150  lsblk
+  151  pvcreate /dev/sdc1
+  152  pvdisplay
+  153  pvcreate /dev/sdc2
+  154  pvcreate /dev/sdc3
+  155  pvdisplay
+  156  vgdisplay
+  157  vgcreate servidores2 /dev/sdc1 /dev/sdc2
+  158  vgdisplay
+  159  man lvcreate
+  160  lvcreate -L 50M -n volumen1 servidores2
+  161  lvdisplay
+  162  lvcreate -L +100%FREE -n volumen2_servidores2 servidores2
+  163  lvcreate -L (+100%FREE) -n volumen2_servidores2 servidores2
+  164  lvcreate -L 100%FREE -n volumen2_servidores2 servidores2
+  165  lvcreate -l 100%FREE -n volumen2_servidores2 servidores2
+  166  lvdisplay 
+  167  cd /dev
+  168  ls
+  169  mkfs.ext4 /dev/servidores2/volumen1 /mnt/
+  170  mkfs.ext4 /dev/servidores2/volumen1 
+  171  lvdispaly
+  172  lvdisplay
+  173  fdisk -l
+  174  pvs
+  175  mount /dev/servidores2/volumen1 /mnt/
+  176  ls /mnt
+  177  umount /mnt/
+  178  ls /mnt
+  179  umount /mnt/
+  180  ls /mnt
+  181  vgextend servidores2 /dev/sdc3
+  182  mkfs.ext4 /dev/servidores2/volumen2_servidores2 
+  183  mount /dev/servidores2/volumen2_servidores2 /mnt/
+  184  ls /mn7
+  185  ls /mnt
+  186  umount /mnt
+  187  lvextend -l 100%FREE volumnes2_servidores2
+  188  lvextend -l 100%FREE -n volumnes2_servidores2 servidores2
+  189  lvextend -l 100%FREE /dev/servidores2/volumen2_servidores2
+  190  resize2fs /dev/servidores2/volumen2_servidores2 
+  191  e2fsck -f /dev/servidores2/volumen2_servidores2
+  192  resize2fs /dev/servidores2/volumen2_servidores2 
+  193  lvdisplay
+  194  lsblk
